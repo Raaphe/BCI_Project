@@ -1,0 +1,181 @@
+{
+  "main": {
+    "id": "ebd92c63a7f4fff8",
+    "type": "split",
+    "children": [
+      {
+        "id": "50e941b256f8a285",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ff135735ce62369",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "468b30b0ee9cf19a",
+    "type": "split",
+    "children": [
+      {
+        "id": "01219603f196797b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "757974a95fdb2b65",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cef913bf972a1df8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8b2a653e3a2ac344",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c41dd06c381a3578",
+    "type": "split",
+    "children": [
+      {
+        "id": "e58f364a54a8e41d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39539072a61eda0d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2510f2643ce0ea43",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5a6dd92f81bfecce",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "da079c5072222a46",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Math/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9ff135735ce62369",
+  "lastOpenFiles": [
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Complex Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240622153503.png",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers",
+    "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Polar Coordinates.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Imaginary Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240622112914.png",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers",
+    "Pasted image 20240622112914.png",
+    "Pasted image 20240622153503.png",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image",
+    "BCIPROJECTVAULT/images/Pasted image 20240622112914.png",
+    "BCIPROJECTVAULT/images/Pasted image 20240622153503.png",
+    "BCIPROJECTVAULT/images",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Complex Arithmetic/(6).jpg",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Complex Arithmetic/(5).jpg",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Complex Arithmetic/(4).jpg",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Complex Arithmetic/(3).jpg",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Complex Arithmetic",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic",
+    "BCIPROJECTVAULT/Learning Path - START.md",
+    "BCIPROJECTVAULT/Q#/Math/Written Notes/README.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes",
+    "BCIPROJECTVAULT/Azure Quantum/Math",
+    "README.md"
+  ]
+}
