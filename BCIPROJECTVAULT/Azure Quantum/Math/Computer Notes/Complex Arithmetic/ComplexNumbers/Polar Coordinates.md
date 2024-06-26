@@ -150,7 +150,7 @@ namespace Kata {
 
 --- 
 
-### Complex Polar to Complex Rectangular
+### Complex Polar to Complex Cartesian
 
 Euler's formula allows us to express the complex polar number as
 

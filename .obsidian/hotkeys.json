@@ -1,0 +1,11 @@
+{
+  "workspace:edit-file-title": [],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "F1"
+    }
+  ]
+}

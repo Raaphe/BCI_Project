@@ -1,5 +1,10 @@
+---
+aliases: 
+tags: []
+---
 
 ---
+
 
 > Most of these notes are provided by Microsoft [here](https://quantum.microsoft.com/en-us/experience/quantum-katas) 
 > Another good source that details much found on here can be found on [this page](https://en.wikipedia.org/wiki/Complex_number)
@@ -24,7 +29,7 @@ When performing operations on complex numbers, it is often helpful to treat them
 
 
 ---
-### Addition
+### Adding Complex Numbers
 
 Here is a function that shows how to add complex numbers together using this formula : 
 
@@ -111,7 +116,7 @@ namespace Kata {
 
 
 ---
-### Multiplication
+### Multiplication Of Complex Numbers
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>x</mi>
@@ -1186,4 +1191,113 @@ namespace Kata {
     }
 }
 
+```
+
+---
+
+# Q# Code
+
+This section will tally all of the Q# code given throughout this section.
+
+### Complex Addition
+
+```C#
+namespace Kata {    
+    open Microsoft.Quantum.Math;
+     
+    function ComplexAdd(x : Complex, y: Complex) : Complex {        
+        let (a, b) = x!;
+        let (c, d) = y!;
+        return Complex(a + c, b + d);
+    }
+}
+```
+
+### Multiplication Of Complex Numbers
+
+```C#
+namespace Kata {    
+    open Microsoft.Quantum.Math;
+    
+    function ComplexMult(x : Complex, y: Complex) : Complex {
+        let (a, b) = x!;
+        let (c, d) = y!;
+        return Complex(a * c - b * d, a * d + b * c);
+    }
+}
+```
+
+### Complex Conjugates
+
+```C#
+namespace Kata {    
+    open Microsoft.Quantum.Math;
+
+    function ComplexConjugate(x : Complex) : Complex {        
+        let (a,b) = x!;
+        return Complex(a, b * -1.);
+    }
+}
+```
+
+### Complex Division
+
+```C#
+namespace Kata {    
+    open Microsoft.Quantum.Math;
+    
+    function ComplexDiv(x : Complex, y: Complex) : Complex {
+        let (a, b) = x!;
+        let (c, d) = y!;
+        let denominator = c * c + d * d;
+        let real = (a * c + b * d) / denominator;
+        let imag = (- a * d + b * c) / denominator;
+        return Complex(real, imag);
+    }
+}
+```
+
+### Complex Modulus
+
+```C#
+namespace Kata {
+    open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Intrinsic;
+
+    function ComplexModulus(x : Complex) : Double {
+        return Sqrt((x::Real * x::Real) + (x::Imag * x::Imag));
+    }
+}
+```
+
+### Euler's Constant Powered By a Complex Number 
+
+```C#
+namespace Kata {
+    open Microsoft.Quantum.Math;
+    
+    function ComplexExponent(x : Complex) : Complex {
+        let (a,b) = x!;
+        return Complex(E()^a*(Cos(b)), E()^a*(Sin(b)));
+    }
+}
+```
+
+### Complex Number Powered by `r`
+
+```C#
+namespace Kata { 
+    open Microsoft.Quantum.Math;
+
+    function ComplexExpReal(r : Double, x : Complex) : Complex {
+        if AbsD(r) < 1e-9 {
+            return Complex(0.0, 0.0);
+        }
+        
+        let (a, b) = x!;        
+        let ra = r ^ a;
+        let lnr = Log(r);
+        return Complex(ra * Cos(b * lnr), ra * Sin(b * lnr));
+    }
+}
 ```
