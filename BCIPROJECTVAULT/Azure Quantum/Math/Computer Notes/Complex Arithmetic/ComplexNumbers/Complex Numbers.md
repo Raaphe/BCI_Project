@@ -810,7 +810,7 @@ This formula is derived from the expression for a complex exponential ea+bie^{a 
 
 1.**Start with the Original Expression:**
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 	  <!-- Start with the Original Expression: -->
 	  <mrow>
 		<msup>
@@ -827,7 +827,7 @@ This formula is derived from the expression for a complex exponential ea+bie^{a 
 
 2 **Separate the Exponents Using Properties:** The exponential function can be split into a product of two simpler exponentials:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 	  <mrow>
 	    <msup>
 	      <mi>e</mi>
@@ -853,7 +853,7 @@ This formula is derived from the expression for a complex exponential ea+bie^{a 
 
 3.**Apply Euler's Formula:** According to Euler's formula, ebie^{bi}ebi can be expressed as:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 	  <!-- Apply Euler's Formula: -->
 	  <mrow>
 	    <msup>
@@ -878,7 +878,7 @@ This formula is derived from the expression for a complex exponential ea+bie^{a 
 
 4.**Combine the Expressions:** Substitute Euler's formula into the separated exponential:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   
   <!-- Combine the Expressions: -->
   <mrow>
@@ -916,7 +916,7 @@ This formula is derived from the expression for a complex exponential ea+bie^{a 
 
 This step results in this:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 	  <mrow>
 	    <msup>
 	      <mi>e</mi>
@@ -960,7 +960,7 @@ This step results in this:
 	   </mrow>
 </math> across the terms inside the parentheses, you get: 
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 
   <!-- Distribute e^a: -->
   <mrow>

@@ -2336,6 +2336,7 @@ The conjugate of a matrix product equals to the product of conjugates of the mat
   </mover>
   <mo stretchy="false">)</mo>
 </math>
+
 ### Adjoint Matrix 
 ---
 
@@ -2698,7 +2699,7 @@ To check whether the input matrix is unitary, we will need to perform the follow
 If the multiplication result 𝐴𝐴† is an identity matrix, which is indeed the case, and the product 𝐴†𝐴 is also an identity matrix (which you can verify in a similar manner), the matrix is unitary.
 
 
-### Inner Product Product
+### Inner Product
 ---
 The **inner product** is yet another important matrix operation that is only applied to vectors. Given two vectors 𝑉 and 𝑊 of the same size, their inner product ⟨𝑉,𝑊⟩ is defined as a product of matrices 𝑉† and 𝑊:
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">

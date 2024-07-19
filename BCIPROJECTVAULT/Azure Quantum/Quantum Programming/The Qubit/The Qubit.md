@@ -46,11 +46,13 @@ This vector is normalized: <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mn>1</mn>
 </math>
 
+> How to calculate the [[Complex Numbers#Modulus|Complex Modulus]] here.
+
 𝛼 and 𝛽 are known as the probability amplitudes of states 0 and 1, respectively.
 
 ## Basis States
 ---
-\
+
 A qubit in state 0 would be represented by the following vector:
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mrow data-mjx-texclass="INNER">
