@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "50e941b256f8a285",
+        "id": "c7b56f9a65bea89e",
         "type": "tabs",
         "children": [
           {
-            "id": "9ff135735ce62369",
+            "id": "4663d995ae48c407",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md"
+              }
             }
           },
           {
@@ -147,24 +155,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9ff135735ce62369",
+  "active": "4663d995ae48c407",
   "lastOpenFiles": [
+    "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Ket-Bra.md",
+    "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/The Qubit.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Matrices.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Linear Algebra/21 24 28 32.pdf",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625200955.png",
     "README.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625200401.png",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Matrices.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit/Untitled.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Linear Algebra/21 24 28 32.pdf",
     "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Linear Algebra",
     "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625163207.png",
     "BCIPROJECTVAULT/Learning Path - START.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Tensors.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240622112914.png",

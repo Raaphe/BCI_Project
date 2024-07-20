@@ -6,793 +6,51 @@
 > Another good source that details much found on here can be found on [this page](https://en.wikipedia.org/wiki/Determinant)
 
 A **matrix** is set of numbers arranged in a rectangular grid. Here is a 2 by 2 matrix:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>  
-𝐴𝑖,𝑗 refers to the element in row 𝑖 and column 𝑗 of matrix 𝐴 (all indices are 0-based). In the above example, 𝐴0,1=2.
+$$A =
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$
+The notation $A_{i,j}$ refers to the element in row 𝑖 and column 𝑗 of matrix 𝐴 (all indices are 0-based). In the above example, $A_{0,1} = 2$.
 
 An 𝑛×𝑚 matrix will have 𝑛 rows and 𝑚 columns:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$\begin{bmatrix}
+    x_{0,0} & x_{0,1} & \dotsb & x_{0,m-1} \\
+    x_{1,0} & x_{1,1} & \dotsb & x_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    x_{n-1,0} & x_{n-1,1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix}$$
 
 A 1×1 matrix is equivalent to a scalar:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mn>3</mn>
-</math>
-Quantum computing uses complex-valued matrices: the elements of a matrix can be complex numbers. This, for example, is a valid complex-valued matrix:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
-          <mi>i</mi>
-        </mtd>
-        <mtd>
-          <mn>3</mn>
-          <mo>+</mo>
-          <mn>4</mn>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-Finally, a **vector** is an 𝑛×1 matrix. Here, for example, is a 3×1 vector:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>V</mi>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>2</mn>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>3</mn>
-          <mo>+</mo>
-          <mn>4</mn>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-Since vectors always have a width of 1, vector elements are sometimes written using only one index. In the above example, 𝑉0=1 and 𝑉1=2𝑖.
+$$\begin{bmatrix} 3 \end{bmatrix} = 3$$
+Quantum computing uses complex-valued matrices: the elements of a matrix can be complex numbers. This, for example, is a valid complex-valued matrix:$$\begin{bmatrix}
+    1 & i \\
+    -2i & 3 + 4i
+\end{bmatrix}$$
+Finally, a **vector** is an 𝑛×1 matrix. Here, for example, is a 3×1 vector:$$V = \begin{bmatrix} 1 \\ 2i \\ 3 + 4i \end{bmatrix}$$
+Since vectors always have a width of 1, vector elements are sometimes written using only one index. In the above example, $V_0 = 1$ and $V_1 = 2i$.
 
 
 ### Matrix Addition
 ---
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>+</mo>
-</math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo>+</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-</math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mi>y</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix}
+    x_{0,0} & x_{0,1} & \dotsb & x_{0,m-1} \\
+    x_{1,0} & x_{1,1} & \dotsb & x_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    x_{n-1,0} & x_{n-1,1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix} +$$
+$$+ \begin{bmatrix}
+    y_{0,0} & y_{0,1} & \dotsb & y_{0,m-1} \\
+    y_{1,0} & y_{1,1} & \dotsb & y_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    y_{n-1,0} & y_{n-1,1} & \dotsb & y_{n-1,m-1}
+\end{bmatrix} =$$
+$$= \begin{bmatrix}
+    x_{0,0} + y_{0,0} & x_{0,1} + y_{0,1} & \dotsb & x_{0,m-1} + y_{0,m-1} \\
+    x_{1,0} + y_{1,0} & x_{1,1} + y_{1,1} & \dotsb & x_{1,m-1} + y_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    x_{n-1,0} + y_{n-1,0} & x_{n-1,1} + y_{n-1,1} & \dotsb & x_{n-1,m-1} + y_{n-1,m-1}
+\end{bmatrix}$$
+
 Similarly, we can compute 𝐴−𝐵 by subtracting elements of 𝐵 from corresponding elements of 𝐴.
 
 Matrix addition has the following properties:
@@ -805,315 +63,20 @@ Matrix addition has the following properties:
 
 The next matrix operation is **scalar multiplication** - multiplying the entire matrix by a scalar (real or complex number):
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>a</mi>
-  <mo>&#x22C5;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mi>a</mi>
-          <mo>&#x22C5;</mo>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$a \cdot
+\begin{bmatrix}
+    x_{0,0} & x_{0,1} & \dotsb & x_{0,m-1} \\
+    x_{1,0} & x_{1,1} & \dotsb & x_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    x_{n-1,0} & x_{n-1,1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix} =
+\begin{bmatrix}
+    a \cdot x_{0,0} & a \cdot x_{0,1} & \dotsb & a \cdot x_{0,m-1} \\
+    a \cdot x_{1,0} & a \cdot x_{1,1} & \dotsb & a \cdot x_{1,m-1} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    a \cdot x_{n-1,0} & a \cdot x_{n-1,1} & \dotsb & a \cdot x_{n-1,m-1}
+\end{bmatrix}$$
+
 Scalar multiplication has the following properties:
 
 - Associativity: 𝑥⋅(𝑦𝐴)=(𝑥⋅𝑦)𝐴
@@ -1126,213 +89,29 @@ Scalar multiplication has the following properties:
 **Matrix multiplication** is a very important and somewhat unusual operation. The unusual thing about it is that neither its operands nor its output are the same size: an 𝑛×𝑚 matrix multiplied by an 𝑚×𝑘 matrix results in an 𝑛×𝑘 matrix. That is, for matrix multiplication to be applicable, the number of columns in the first matrix must equal the number of rows in the second matrix.
 
 Here is how matrix product is calculated: if we are calculating 𝐴𝐵=𝐶, then
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>C</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mn>0</mn>
-    </mrow>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <msub>
-    <mi>B</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mn>0</mn>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <msub>
-    <mi>B</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <mo>&#x22EF;</mo>
-  <mo>+</mo>
-  <msub>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <msub>
-    <mi>B</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <munderover>
-    <mo data-mjx-texclass="OP">&#x2211;</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>t</mi>
-      <mo>=</mo>
-      <mn>0</mn>
-    </mrow>
-    <mrow data-mjx-texclass="ORD">
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </munderover>
-  <msub>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mi>t</mi>
-    </mrow>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <msub>
-    <mi>B</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>t</mi>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math>
+
+$$C_{i,j} = A_{i,0} \cdot B_{0,j} + A_{i,1} \cdot B_{1,j} + \dotsb + A_{i,m-1} \cdot B_{m-1,j} = \sum_{t = 0}^{m-1} A_{i,t} \cdot B_{t,j}$$
+
 Here is a small example:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-        <mtd>
-          <mn>5</mn>
-        </mtd>
-        <mtd>
-          <mn>6</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-          <mo>+</mo>
-          <mn>2</mn>
-          <mo>&#x22C5;</mo>
-          <mn>2</mn>
-          <mo>+</mo>
-          <mn>3</mn>
-          <mo>&#x22C5;</mo>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>4</mn>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-          <mo>+</mo>
-          <mn>5</mn>
-          <mo>&#x22C5;</mo>
-          <mn>2</mn>
-          <mo>+</mo>
-          <mn>6</mn>
-          <mo>&#x22C5;</mo>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>14</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>32</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+\end{bmatrix}
+\begin{bmatrix}
+    1 \\
+    2 \\
+    3
+\end{bmatrix} =
+\begin{bmatrix}
+    1 \cdot 1 + 2 \cdot 2 + 3 \cdot 3 \\
+    4 \cdot 1 + 5 \cdot 2 + 6 \cdot 3
+\end{bmatrix} =
+\begin{bmatrix}
+    14 \\
+    32
+\end{bmatrix}$$
+
 Matrix multiplication has the following properties:
 
 - Associativity: 𝐴(𝐵𝐶)=(𝐴𝐵)𝐶
@@ -1348,1418 +127,191 @@ Another very important property of matrix multiplication is that a matrix multip
 ---
 
 An **identity matrix** 𝐼𝑛 is a special 𝑛×𝑛 matrix which has 1s on the main diagonal, and 0s everywhere else:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msub>
-    <mi>I</mi>
-    <mi>n</mi>
-  </msub>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-What makes it special is that multiplying any matrix (of compatible size) by 𝐼𝑛 returns the original matrix. To put it another way, if 𝐴 is an 𝑛×𝑚 matrix:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <msub>
-    <mi>I</mi>
-    <mi>m</mi>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>I</mi>
-    <mi>n</mi>
-  </msub>
-  <mi>A</mi>
-  <mo>=</mo>
-  <mi>A</mi>
-</math>
-This is why 𝐼𝑛 is called an identity matrix - it acts as a **multiplicative identity**. In other words, it is the matrix equivalent of the number 1.
+
+$$I_n =
+\begin{bmatrix}
+    1 & 0 & \dotsb & 0 \\
+    0 & 1 & \dotsb & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \dotsb & 1
+\end{bmatrix}$$
+
+What makes it special is that multiplying any matrix (of compatible size) by $I_n$ returns the original matrix. To put it another way, if 𝐴 is an 𝑛×𝑚 matrix:
+
+$$AI_m = I_nA = A$$
+
+This is why $I_n$ is called an identity matrix - it acts as a **multiplicative identity**. In other words, it is the matrix equivalent of the number 1.
 
 ### Inverse Matrices
 ---
 
 
-A square 𝑛×𝑛 matrix 𝐴 is **invertible** if it has an inverse 𝑛×𝑛 matrix 𝐴−1 with the following property:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mo>=</mo>
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mi>A</mi>
-  <mo>=</mo>
-  <msub>
-    <mi>I</mi>
-    <mi>n</mi>
-  </msub>
-</math>
-In other words, 𝐴−1 acts as the **multiplicative inverse** of 𝐴.
+A square 𝑛×𝑛 matrix 𝐴 is **invertible** if it has an inverse 𝑛×𝑛 matrix $A^{-1}$ with the following property:
+
+$$AA^{-1} = A^{-1}A = I_n$$
+
+In other words, $A^{-1}$ acts as the **multiplicative inverse** of 𝐴.
 
 Another, equivalent definition highlights what makes this an interesting property. For any matrices 𝐵 and 𝐶 of compatible sizes:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo stretchy="false">(</mo>
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>B</mi>
-</math><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo stretchy="false">(</mo>
-  <mi>C</mi>
-  <mi>A</mi>
-  <mo stretchy="false">)</mo>
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mo>=</mo>
-  <mo stretchy="false">(</mo>
-  <mi>C</mi>
-  <msup>
-    <mi>A</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mo stretchy="false">)</mo>
-  <mi>A</mi>
-  <mo>=</mo>
-  <mi>C</mi>
-</math>
+
+$$A^{-1}(AB) = A(A^{-1}B) = B$$
+$$(CA)A^{-1} = (CA^{-1})A = C$$
+
 A square matrix has a property called the **determinant**, with the determinant of matrix 𝐴 being written as |𝐴|. A matrix is invertible if and only if its determinant isn't equal to 0.
 
-For a 2×2 matrix 𝐴, the determinant is defined as |𝐴|=𝐴0,0⋅𝐴1,1−𝐴0,1⋅𝐴1,0.
+For a 2×2 matrix 𝐴, the determinant is defined as $|A| = A_{0,0} \cdot A_{1,1} - A_{0,1} \cdot A_{1,0}$.
 
 ### Matrix Transposition
 ---
 
-The **transpose** operation, denoted as 𝐴𝑇, is essentially a reflection of the matrix across the diagonal: 𝐴𝑖,𝑗𝑇=𝐴𝑗,𝑖.
+The **transpose** operation, denoted as $A^T$, is essentially a reflection of the matrix across the diagonal: $A^T_{i,j} = A_{j,i}$.
 
-Given an 𝑛×𝑚 matrix 𝐴, its transpose is the 𝑚×𝑛 matrix 𝐴𝑇, such that if:
+Given an 𝑛×𝑚 matrix 𝐴, its transpose is the 𝑚×𝑛 matrix $A^T$, such that if:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>then:
+$$A =
+\begin{bmatrix}
+    x_{0,0} & x_{0,1} & \dotsb & x_{0,m-1} \\
+    x_{1,0} & x_{1,1} & \dotsb & x_{1,m-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    x_{n-1,0} & x_{n-1,1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix}$$
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>A</mi>
-    <mi>T</mi>
-  </msup>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>For example:
+then:
+$$A^T =
+\begin{bmatrix}
+    x_{0,0} & x_{1,0} & \dotsb & x_{n-1,0} \\
+    x_{0,1} & x_{1,1} & \dotsb & x_{n-1,1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    x_{0,m-1} & x_{1,m-1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix}$$
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mrow data-mjx-texclass="INNER">
-      <mo data-mjx-texclass="OPEN">[</mo>
-      <mtable columnspacing="1em" rowspacing="4pt">
-        <mtr>
-          <mtd>
-            <mn>1</mn>
-          </mtd>
-          <mtd>
-            <mn>2</mn>
-          </mtd>
-        </mtr>
-        <mtr>
-          <mtd>
-            <mn>3</mn>
-          </mtd>
-          <mtd>
-            <mn>4</mn>
-          </mtd>
-        </mtr>
-        <mtr>
-          <mtd>
-            <mn>5</mn>
-          </mtd>
-          <mtd>
-            <mn>6</mn>
-          </mtd>
-        </mtr>
-      </mtable>
-      <mo data-mjx-texclass="CLOSE">]</mo>
-    </mrow>
-    <mi>T</mi>
-  </msup>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-        <mtd>
-          <mn>5</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-        <mtd>
-          <mn>6</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-A **symmetric** matrix is a square matrix which equals its own transpose: 𝐴=𝐴𝑇. To put it another way, it has reflection symmetry (hence the name) across the main diagonal. For example, the following matrix is symmetric:
+For example:
+$$\begin{bmatrix}
+    1 & 2 \\
+    3 & 4 \\
+    5 & 6
+\end{bmatrix}^T =
+\begin{bmatrix}
+    1 & 3 & 5 \\
+    2 & 4 & 6
+\end{bmatrix}$$
+A **symmetric** matrix is a square matrix which equals its own transpose: $A = A^T$. To put it another way, it has reflection symmetry (hence the name) across the main diagonal. For example, the following matrix is symmetric
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-        <mtd>
-          <mn>5</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>3</mn>
-        </mtd>
-        <mtd>
-          <mn>5</mn>
-        </mtd>
-        <mtd>
-          <mn>6</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-The transpose of a matrix product is equal to the product of transposed matrices, taken in reverse order:
+$$\begin{bmatrix}
+    1 & 2 & 3 \\
+    2 & 4 & 5 \\
+    3 & 5 & 6
+\end{bmatrix}$$
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mi>B</mi>
-  <msup>
-    <mo stretchy="false">)</mo>
-    <mi>T</mi>
-  </msup>
-  <mo>=</mo>
-  <msup>
-    <mi>B</mi>
-    <mi>T</mi>
-  </msup>
-  <msup>
-    <mi>A</mi>
-    <mi>T</mi>
-  </msup>
-</math>
+The transpose of a matrix product is equal to the product of transposed matrices, taken in reverse order:$$(AB)^T = B^TA^T$$
 
 ### Matrix Conjugates
 ---
 The next important single-matrix operation is the **matrix conjugate**, denoted as 𝐴―. This operation makes sense only for complex-valued matrices; as the name might suggest, it involves taking the complex conjugate of every element of the matrix: if
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mi>x</mi>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$A =
+\begin{bmatrix}
+    x_{0,0} & x_{0,1} & \dotsb & x_{0,m-1} \\
+    x_{1,0} & x_{1,1} & \dotsb & x_{1,m-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    x_{n-1,0} & x_{n-1,1} & \dotsb & x_{n-1,m-1}
+\end{bmatrix}$$
+
 Then:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mover>
-    <mi>A</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>0</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-        <mtd>
-          <mo>&#x22F1;</mo>
-        </mtd>
-        <mtd>
-          <mrow data-mjx-texclass="ORD">
-            <mo>&#x22EE;</mo>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>0</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-        <mtd>
-          <mo>&#x22EF;</mo>
-        </mtd>
-        <mtd>
-          <msub>
-            <mover>
-              <mi>x</mi>
-              <mo accent="true">&#x2015;</mo>
-            </mover>
-            <mrow data-mjx-texclass="ORD">
-              <mi>n</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-              <mo>,</mo>
-              <mi>m</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-> As a reminder, a conjugate of a complex number <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-  <mo>=</mo>
-  <mi>a</mi>
-  <mo>+</mo>
-  <mi>b</mi>
-  <mi>i</mi>
-</math> is <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mover>
-    <mi>x</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo>=</mo>
-  <mi>a</mi>
-  <mo>&#x2212;</mo>
-  <mi>b</mi>
-  <mi>i</mi>
-</math>.
+
+$$\overline{A} =
+\begin{bmatrix}
+    \overline{x}_{0,0} & \overline{x}_{0,1} & \dotsb & \overline{x}_{0,m-1} \\
+    \overline{x}_{1,0} & \overline{x}_{1,1} & \dotsb & \overline{x}_{1,m-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \overline{x}_{n-1,0} & \overline{x}_{n-1,1} & \dotsb & \overline{x}_{n-1,m-1}
+\end{bmatrix}$$
+
+> As a reminder, a conjugate of a complex number $x = a + bi$ is $\overline{x} = a - bi$
 
 The conjugate of a matrix product equals to the product of conjugates of the matrices:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mover>
-    <mrow>
-      <mi>A</mi>
-      <mi>B</mi>
-    </mrow>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo>=</mo>
-  <mo stretchy="false">(</mo>
-  <mover>
-    <mi>A</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo stretchy="false">)</mo>
-  <mo stretchy="false">(</mo>
-  <mover>
-    <mi>B</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo stretchy="false">)</mo>
-</math>
+$$\overline{AB} = (\overline{A})(\overline{B})$$
 
 ### Adjoint Matrix 
 ---
 
-The final important single-matrix operation is a combination of the previous two. The **conjugate transpose**, also called the **adjoint** of matrix 𝐴, is defined as <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mi>A</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mo>=</mo>
-  <mover>
-    <mrow>
-      <mo stretchy="false">(</mo>
-      <msup>
-        <mi>A</mi>
-        <mi>T</mi>
-      </msup>
-      <mo stretchy="false">)</mo>
-    </mrow>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <mo>=</mo>
-  <mo stretchy="false">(</mo>
-  <mover>
-    <mi>A</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-  <msup>
-    <mo stretchy="false">)</mo>
-    <mi>T</mi>
-  </msup>
-</math>.
+The final important single-matrix operation is a combination of the previous two. The **conjugate transpose**, also called the **adjoint** of matrix 𝐴, is defined as $A^\dagger = \overline{(A^T)} = (\overline{A})^T$.
 
-A matrix is known as **Hermitian** or **self-adjoint** if it equals its own adjoint: <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>A</mi>
-  <mo>=</mo>
-  <msup>
-    <mi>A</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-</math>. For example, the following matrix is Hermitian:
+A matrix is known as **Hermitian** or **self-adjoint** if it equals its own adjoint: $A = A^\dagger$. For example, the following matrix is Hermitian:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-        </mtd>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$\begin{bmatrix}
+    1 & i \\
+    -i & 2
+\end{bmatrix}$$
+The adjoint of a matrix product can be calculated as follows:
+
+$$(AB)^\dagger = B^\dagger A^\dagger$$
+
 ### Unitary Matrices
 ---
 
-
-
-**Unitary matrices** are very important for quantum computing. A matrix is unitary when it is invertible, and its inverse is equal to its adjoint: 𝑈−1=𝑈†. That is, an 𝑛×𝑛 square matrix 𝑈 is unitary if and only if <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>U</mi>
-  <msup>
-    <mi>U</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mo>=</mo>
-  <msup>
-    <mi>U</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mi>U</mi>
-  <mo>=</mo>
-  <msub>
-    <mi>I</mi>
-    <mi>n</mi>
-  </msub>
-</math>.
-
-ex:
+**Unitary matrices** are very important for quantum computing. A matrix is unitary when it is invertible, and its inverse is equal to its adjoint: $U^{-1} = U^\dagger$. That is, an 𝑛×𝑛 square matrix 𝑈 is unitary if and only if $UU^\dagger = U^\dagger U = I_n$.
 
 Is this matrix unitary?
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mi>i</mi>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-        <mtd>
-          <mfrac>
-            <mrow>
-              <mo>&#x2212;</mo>
-              <mi>i</mi>
-            </mrow>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mfrac>
-    <mn>1</mn>
-    <msqrt>
-      <mn>2</mn>
-    </msqrt>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$A = \begin{bmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+    \frac{i}{\sqrt{2}} & \frac{-i}{\sqrt{2}}
+\end{bmatrix} = 
+\frac{1}{\sqrt{2}} \begin{bmatrix}
+    1 & 1 \\
+    i & -i
+\end{bmatrix}$$
+
 To check whether the input matrix is unitary, we will need to perform the following steps:
 
-1. Calculate the adjoint of the input matrix 𝐴†.
+1. Calculate the adjoint of the input matrix $A^\dagger$.
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <msup>
-    <mi>A</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mo>=</mo>
-  <mfrac>
-    <mn>1</mn>
-    <msqrt>
-      <mn>2</mn>
-    </msqrt>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-2. Multiply it by the input matrix.
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>A</mi>
-  <msup>
-    <mi>A</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mo>=</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-          <mo>+</mo>
-          <mn>1</mn>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-          <mo>&#x22C5;</mo>
-          <mo stretchy="false">(</mo>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-          <mo stretchy="false">)</mo>
-          <mo>+</mo>
-          <mn>1</mn>
-          <mo>&#x22C5;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>i</mi>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-          <mo>+</mo>
-          <mo stretchy="false">(</mo>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-          <mo stretchy="false">)</mo>
-          <mo>&#x22C5;</mo>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mi>i</mi>
-          <mo>&#x22C5;</mo>
-          <mo stretchy="false">(</mo>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-          <mo stretchy="false">)</mo>
-          <mo>+</mo>
-          <mo stretchy="false">(</mo>
-          <mo>&#x2212;</mo>
-          <mi>i</mi>
-          <mo stretchy="false">)</mo>
-          <mo>&#x22C5;</mo>
-          <mi>i</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+$$A^\dagger = \frac{1}{\sqrt{2}} \begin{bmatrix}
+     1 & -i \\
+     1 & i
+ \end{bmatrix}$$
 
-If the multiplication result 𝐴𝐴† is an identity matrix, which is indeed the case, and the product 𝐴†𝐴 is also an identity matrix (which you can verify in a similar manner), the matrix is unitary.
+1. Multiply it by the input matrix.
+
+$$AA^\dagger = \frac12 \begin{bmatrix}
+     1 & 1 \\
+     i & -i
+ \end{bmatrix} \begin{bmatrix}
+     1 & -i \\
+     1 & i
+ \end{bmatrix} = \frac12 \begin{bmatrix}
+     1 \cdot 1 + 1 \cdot 1 & 1 \cdot (-i) + 1 \cdot i \\
+     i \cdot 1 + (-i) \cdot 1 & i \cdot (-i) + (-i) \cdot i
+ \end{bmatrix} = \begin{bmatrix}
+     1 & 0 \\
+     0 & 1
+ \end{bmatrix}$$
+
+If the multiplication result $AA^\dagger$ is an identity matrix, which is indeed the case, and the product $A^\dagger A$ is also an identity matrix (which you can verify in a similar manner), the matrix is unitary.
 
 
 ### Inner Product
 ---
-The **inner product** is yet another important matrix operation that is only applied to vectors. Given two vectors 𝑉 and 𝑊 of the same size, their inner product ⟨𝑉,𝑊⟩ is defined as a product of matrices 𝑉† and 𝑊:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mi>V</mi>
-  <mo>,</mo>
-  <mi>W</mi>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <msup>
-    <mi>V</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mi>W</mi>
-</math>
+The **inner product** is yet another important matrix operation that is only applied to vectors. Given two vectors 𝑉 and 𝑊 of the same size, their inner product $\langle V , W \rangle$ is defined as a product of matrices $V^\dagger$ and 𝑊:
+
+$$\langle V , W \rangle = V^\dagger W$$
+
 Let's break this down so it's a bit easier to understand. A 1×𝑛 matrix (the adjoint of an 𝑛×1 vector) multiplied by an 𝑛×1 vector results in a 1×1 matrix (which is equivalent to a scalar). The result of an inner product is that scalar.
+
+That is, to calculate the inner product of two vectors, take the corresponding elements $V_k$ and $W_k$, multiply the complex conjugate of $V_k$ by $W_k$, and add up those products:
+
+$$\langle V , W \rangle = \sum_{k=0}^{n-1}\overline{V_k}W_k$$
 
 If you are familiar with the **dot product**, you will notice that it is equivalent to inner product for real-numbered vectors.
 
->We use our definition for these tutorials because it matches the notation used in quantum computing. You might encounter other sources which define the inner product a little differently: <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mi>V</mi>
-  <mo>,</mo>
-  <mi>W</mi>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <msup>
-    <mi>W</mi>
-    <mo>&#x2020;</mo>
-  </msup>
-  <mi>V</mi>
-  <mo>=</mo>
-  <msup>
-    <mi>V</mi>
-    <mi>T</mi>
-  </msup>
-  <mover>
-    <mi>W</mi>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-</math>, in contrast to the 𝑉†𝑊 that we use. These definitions are almost equivalent, with some differences in the scalar multiplication by a complex number.
+>We use our definition for these tutorials because it matches the notation used in quantum computing. You might encounter other sources which define the inner product a little differently: $\langle V , W \rangle = W^\dagger V = V^T\overline{W}$, in contrast to the $V^\dagger W$ that we use. These definitions are almost equivalent, with some differences in the scalar multiplication by a complex number.
 
 #### Vector Norm
 ---
 
-An immediate application for the inner product is computing the **vector norm**. The norm of vector 𝑉 is defined as <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mi>V</mi>
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mo>=</mo>
-  <msqrt>
-    <mo fence="false" stretchy="false">&#x27E8;</mo>
-    <mi>V</mi>
-    <mo>,</mo>
-    <mi>V</mi>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </msqrt>
-</math>. This condenses the vector down to a single non-negative real value. If the vector represents coordinates in space, the norm happens to be the length of the vector. A vector is called **normalized** if its norm is equal to 1.
+An immediate application for the inner product is computing the **vector norm**. The norm of vector 𝑉 is defined as $||V|| = \sqrt{\langle V , V \rangle}$. This condenses the vector down to a single non-negative real value. If the vector represents coordinates in space, the norm happens to be the length of the vector. A vector is called normalized if its norm is equal to 1.
 
 The inner product has the following properties:
 
@@ -2869,29 +421,7 @@ The inner product has the following properties:
 #### Outer Products
 ---
 
-The **outer product** of two vectors 𝑉 and 𝑊 is defined as 𝑉𝑊†. That is, the outer product of an 𝑛×1 vector and an 𝑚×1 vector is an 𝑛×𝑚 matrix. If we denote the outer product of 𝑉 and 𝑊 as 𝑋, then <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mi>X</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mo>,</mo>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>V</mi>
-    <mi>i</mi>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <mover>
-    <msub>
-      <mi>W</mi>
-      <mi>j</mi>
-    </msub>
-    <mo accent="true">&#x2015;</mo>
-  </mover>
-</math>.
+The **outer product** of two vectors 𝑉 and 𝑊 is defined as 𝑉𝑊†. That is, the outer product of an 𝑛×1 vector and an 𝑚×1 vector is an 𝑛×𝑚 matrix. If we denote the outer product of 𝑉 and 𝑊 as 𝑋, then $X_{i,j} = V_i \cdot \overline{W_j}$.
 
 ### Tensor Products
 ---
@@ -2900,86 +430,34 @@ The **tensor product** is a different way of multiplying matrices. Rather than
 
 Given 𝑛×𝑚 matrix 𝐴 and 𝑘×𝑙 matrix 𝐵, their tensor product 𝐴⊗𝐵 is an (𝑛⋅𝑘)×(𝑚⋅𝑙) matrix defined as follows:
 
-![[Pasted image 20240625163207.png]]
+$$A \otimes B =
+\begin{bmatrix}
+    A_{0,0} \cdot B & A_{0,1} \cdot B & \dotsb & A_{0,m-1} \cdot B \\
+    A_{1,0} \cdot B & A_{1,1} \cdot B & \dotsb & A_{1,m-1} \cdot B \\
+    \vdots & \vdots & \ddots & \vdots \\
+    A_{n-1,0} \cdot B & A_{n-1,1} \cdot B & \dotsb & A_{n-1,m-1} \cdot B
+\end{bmatrix} =$$
+$$= \begin{bmatrix}
+    A_{0,0} \cdot \begin{bmatrix}B_{0,0} & \dotsb & B_{0,l-1} \\ \vdots & \ddots & \vdots \\ B_{k-1,0} & \dotsb & b_{k-1,l-1} \end{bmatrix} & \dotsb &
+    A_{0,m-1} \cdot \begin{bmatrix}B_{0,0} & \dotsb & B_{0,l-1} \\ \vdots & \ddots & \vdots \\ B_{k-1,0} & \dotsb & B_{k-1,l-1} \end{bmatrix} \\
+    \vdots & \ddots & \vdots \\
+    A_{n-1,0} \cdot \begin{bmatrix}B_{0,0} & \dotsb & B_{0,l-1} \\ \vdots & \ddots & \vdots \\ B_{k-1,0} & \dotsb & B_{k-1,l-1} \end{bmatrix} & \dotsb &
+    A_{n-1,m-1} \cdot \begin{bmatrix}B_{0,0} & \dotsb & B_{0,l-1} \\ \vdots & \ddots & \vdots \\ B_{k-1,0} & \dotsb & B_{k-1,l-1} \end{bmatrix}
+\end{bmatrix} =$$
+$$= \begin{bmatrix}
+    A_{0,0} \cdot B_{0,0} & \dotsb & A_{0,0} \cdot B_{0,l-1} & \dotsb & A_{0,m-1} \cdot B_{0,0} & \dotsb & A_{0,m-1} \cdot B_{0,l-1} \\
+    \vdots & \ddots & \vdots & \dotsb & \vdots & \ddots & \vdots \\
+    A_{0,0} \cdot B_{k-1,0} & \dotsb & A_{0,0} \cdot B_{k-1,l-1} & \dotsb & A_{0,m-1} \cdot B_{k-1,0} & \dotsb & A_{0,m-1} \cdot B_{k-1,l-1} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+    A_{n-1,0} \cdot B_{0,0} & \dotsb & A_{n-1,0} \cdot B_{0,l-1} & \dotsb & A_{n-1,m-1} \cdot B_{0,0} & \dotsb & A_{n-1,m-1} \cdot B_{0,l-1} \\
+    \vdots & \ddots & \vdots & \dotsb & \vdots & \ddots & \vdots \\
+    A_{n-1,0} \cdot B_{k-1,0} & \dotsb & A_{n-1,0} \cdot B_{k-1,l-1} & \dotsb & A_{n-1,m-1} \cdot B_{k-1,0} & \dotsb & A_{n-1,m-1} \cdot B_{k-1,l-1}
+\end{bmatrix}$$
 
 Notice that the tensor product of two vectors is another vector: if 𝑉 is an 𝑛×1 vector, and 𝑊 is an 𝑚×1 vector, 𝑉⊗𝑊 is an (𝑛⋅𝑚)×1 vector.
 
 The tensor product has the following properties:
 
-- Distributivity over addition: <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mo>+</mo>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-  <mo>&#x2297;</mo>
-  <mi>C</mi>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mi>C</mi>
-  <mo>+</mo>
-  <mi>B</mi>
-  <mo>&#x2297;</mo>
-  <mi>C</mi>
-</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mo stretchy="false">(</mo>
-  <mi>B</mi>
-  <mo>+</mo>
-  <mi>C</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mi>B</mi>
-  <mo>+</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mi>C</mi>
-</math>
-- Associativity with scalar multiplication: <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mi>A</mi>
-  <mo stretchy="false">)</mo>
-  <mo>&#x2297;</mo>
-  <mi>B</mi>
-  <mo>=</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mo stretchy="false">(</mo>
-  <mi>x</mi>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-</math>
-- Mixed-product property (relation with matrix multiplication):<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mo>&#x2297;</mo>
-  <mi>B</mi>
-  <mo stretchy="false">)</mo>
-  <mo stretchy="false">(</mo>
-  <mi>C</mi>
-  <mo>&#x2297;</mo>
-  <mi>D</mi>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mo stretchy="false">(</mo>
-  <mi>A</mi>
-  <mi>C</mi>
-  <mo stretchy="false">)</mo>
-  <mo>&#x2297;</mo>
-  <mo stretchy="false">(</mo>
-  <mi>B</mi>
-  <mi>D</mi>
-  <mo stretchy="false">)</mo>
-</math>
+- Distributivity over addition: $(A + B) \otimes C = A \otimes C + B \otimes C$ , $A \otimes (B + C) = A \otimes B + A \otimes C$
+- Associativity with scalar multiplication: $x(A \otimes B) = (xA) \otimes B = A \otimes (xB)$
+- Mixed-product property (relation with matrix multiplication): $(A \otimes B) (C \otimes D) = (AC) \otimes (BD)$

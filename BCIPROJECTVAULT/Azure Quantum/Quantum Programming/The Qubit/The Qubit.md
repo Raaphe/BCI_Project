@@ -8,43 +8,12 @@ The basic building block of a classical computer is the bit - a single memory ce
 ## Matrix Representation
 ---
 The state of a qubit is represented by a complex vector of size 2:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$$
+
 Here 𝛼 and 𝛽 are complex numbers. 𝛼 represents how "close" the qubit is to state 0, and 𝛽 represents how "close" the qubit is to state 1. 
 
-This vector is normalized: <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mi>&#x3B1;</mi>
-  <msup>
-    <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-    <mn>2</mn>
-  </msup>
-  <mo>+</mo>
-  <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-  <mi>&#x3B2;</mi>
-  <msup>
-    <mo data-mjx-texclass="ORD" stretchy="false">|</mo>
-    <mn>2</mn>
-  </msup>
-  <mo>=</mo>
-  <mn>1</mn>
-</math>
+This vector is normalized: $|\alpha|^2 + |\beta|^2 = 1$
 
 > How to calculate the [[Complex Numbers#Modulus|Complex Modulus]] here.
 
@@ -54,495 +23,41 @@ This vector is normalized: <math xmlns="http://www.w3.org/1998/Math/MathML">
 ---
 
 A qubit in state 0 would be represented by the following vector:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+
 Likewise, a qubit in state 1 would be represented by this vector:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
-Note that you can use scalar multiplication and vector addition to express any qubit state <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math> as a sum of these two vectors with certain weights 𝛼 and 𝛽, known as linear combination.
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>+</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mi>&#x3B1;</mi>
-  <mo>&#x22C5;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>+</mo>
-  <mi>&#x3B2;</mi>
-  <mo>&#x22C5;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+
+Note that you can use scalar multiplication and vector addition to express any qubit state $\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ as a sum of these two vectors with certain weights 𝛼 and 𝛽, known as linear combination.
+
+$$\begin{bmatrix} \alpha \\ \beta \end{bmatrix} =
+\begin{bmatrix} \alpha \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ \beta \end{bmatrix} =
+\alpha \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \beta \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+
 Because of this, qubit states 0 and 1 are known as basis states. These two vectors have two properties.
 
 1. They are normalized.
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>,</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>,</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <mn>1</mn>
-</math>
+
+$$\langle \begin{bmatrix} 1 \\ 0 \end{bmatrix} , \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rangle =
+ \langle \begin{bmatrix} 0 \\ 1 \end{bmatrix} , \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rangle = 1$$
+
 2. They are orthogonal to each other.
 
-	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>,</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <mo fence="false" stretchy="false">&#x27E8;</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>,</mo>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo fence="false" stretchy="false">&#x27E9;</mo>
-  <mo>=</mo>
-  <mn>0</mn>
-</math>
+$$\langle \begin{bmatrix} 1 \\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rangle =
+ \langle \begin{bmatrix} 0 \\ 1 \end{bmatrix} , \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rangle = 0$$
+
 > As a reminder, ⟨𝑉,𝑊⟩ is the inner product of 𝑉 and 𝑊.
 
-This means that these vectors form an **orthonormal basis**. The basis of <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math> is called the **computational basis**, also known as the **canonical basis**.
+This means that these vectors form an **orthonormal basis**. The basis of $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ and $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ is called the computational basis, also known as the canonical basis.
 
 >There exist other orthonormal bases, for example, the **Hadamard basis**, formed by the vectors
-><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mtext>&#xA0;and&#xA0;</mtext>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math> 
+>$$\begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix} \text{ and } \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{bmatrix}$$ 
    You can check that these vectors are normalized, and orthogonal to each other. Any qubit state  can be expressed as a linear combination of these vectors:
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mi>&#x3B1;</mi>
-      <mo>+</mo>
-      <mi>&#x3B2;</mi>
-    </mrow>
-    <msqrt>
-      <mn>2</mn>
-    </msqrt>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mi>&#x3B1;</mi>
-      <mo>&#x2212;</mo>
-      <mi>&#x3B2;</mi>
-    </mrow>
-    <msqrt>
-      <mn>2</mn>
-    </msqrt>
-  </mfrac>
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mo>&#x2212;</mo>
-          <mfrac>
-            <mn>1</mn>
-            <msqrt>
-              <mn>2</mn>
-            </msqrt>
-          </mfrac>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-</math>
+   >$$\begin{bmatrix} \alpha \\ \beta \end{bmatrix} =
+\frac{\alpha + \beta}{\sqrt{2}} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix} +
+\frac{\alpha - \beta}{\sqrt{2}} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{bmatrix}$$
 >The Hadamard basis is widely used in quantum computing, for example, in the [BB84 quantum key distribution protocol](https://en.wikipedia.org/wiki/BB84).
 
 
@@ -551,220 +66,36 @@ This means that these vectors form an **orthonormal basis**. The basis of <mat
 
 Dirac notation is a shorthand notation that eases writing quantum states and computing linear algebra. In Dirac notation, a vector is denoted by a symbol called a **ket**. For example, a qubit in state 0 is represented by the ket |0⟩, and a qubit in state 1 is represented by the ket |1⟩:
 
-![[Pasted image 20240625200401.png]]
+| $\ket{0} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ | $\ket{1} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ |
+| ------------------------------------------------ | ------------------------------------------------ |
 
 These two kets represent basis states, so they can be used to represent any other state:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mi>&#x3B1;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>0</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-  <mo>+</mo>
-  <mi>&#x3B2;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-</math>
+
+$$\begin{bmatrix} \alpha \\ \beta \end{bmatrix} = \alpha\ket{0} + \beta\ket{1}$$
+
 Dirac notation is not only restricted to vectors 0 and 1; it can be used to represent any vector, similar to how variable names are used in algebra. For example, we can call the state above "the state 𝜓" and write it as:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mi>&#x3C8;</mi>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-  <mo>=</mo>
-  <mi>&#x3B1;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>0</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-  <mo>+</mo>
-  <mi>&#x3B2;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-</math>
+
+$$\ket{\psi} = \alpha\ket{0} + \beta\ket{1}$$
+
 Several ket symbols have a generally accepted use, so you will see them often:
 
-![[Pasted image 20240625200955.png]]
-
+| $\ket{+} = \frac{1}{\sqrt{2}}\big(\ket{0} + \ket{1}\big)$  | $\ket{-} = \frac{1}{\sqrt{2}}\big(\ket{0} - \ket{1}\big)$   |
+| ---------------------------------------------------------- | ----------------------------------------------------------- |
+| $\ket{i} = \frac{1}{\sqrt{2}}\big(\ket{0} + i\ket{1}\big)$ | $\ket{-i} = \frac{1}{\sqrt{2}}\big(\ket{0} - i\ket{1}\big)$ |
 We will learn more about Dirac notation in the next katas, as we introduce quantum gates and multi-qubit systems.
 
 ## Relative and Global Phase
 ---
 
-Complex numbers have a parameter called the phase. If a complex number 𝑧=𝑥+𝑖𝑦 is written in polar form <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>z</mi>
-  <mo>=</mo>
-  <mi>r</mi>
-  <msup>
-    <mi>e</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mi>&#x3B8;</mi>
-    </mrow>
-  </msup>
-</math>, its phase is 𝜃, where 𝜃=𝑎𝑡𝑎𝑛2(𝑦,𝑥).
+Complex numbers have a parameter called the phase. If a complex number 𝑧=𝑥+𝑖𝑦 is written in polar form $z = re^{i\theta}$, its phase is 𝜃, where 𝜃=𝑎𝑡𝑎𝑛2(𝑦,𝑥).
 
->`atan2` is a useful function available in most programming languages. It takes two arguments and returns an angle 𝜃 between −𝜋 and 𝜋 that has cos⁡𝜃=𝑥 and sin⁡𝜃=𝑦. Unlike using <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mi>tan</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </msup>
-  <mo data-mjx-texclass="NONE">&#x2061;</mo>
-  <mo stretchy="false">(</mo>
-  <mfrac>
-    <mi>y</mi>
-    <mi>x</mi>
-  </mfrac>
-  <mo stretchy="false">)</mo>
-</math>, `atan2` computes the correct quadrant for the angle, since it preserves information about the signs of both sine and cosine of the angle.
+>`atan2` is a useful function available in most programming languages. It takes two arguments and returns an angle 𝜃 between −𝜋 and 𝜋 that has cos⁡𝜃=𝑥 and sin⁡𝜃=𝑦. Unlike using $\tan^{-1}(\frac{y}{x})$, `atan2` computes the correct quadrant for the angle, since it preserves information about the signs of both sine and cosine of the angle.
 
-The probability amplitudes 𝛼 and 𝛽 are complex numbers, therefore 𝛼 and 𝛽 have a phase. For example, consider a qubit in state <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-      <mo>+</mo>
-      <mi>i</mi>
-    </mrow>
-    <mn>2</mn>
-  </mfrac>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>0</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-      <mo>&#x2212;</mo>
-      <mi>i</mi>
-    </mrow>
-    <mn>2</mn>
-  </mfrac>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-</math>. If you do the math, you see that the phase of |0⟩ is
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>a</mi>
-  <mi>t</mi>
-  <mi>a</mi>
-  <mi>n</mi>
-  <mn>2</mn>
-  <mo stretchy="false">(</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mo>,</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mfrac>
-    <mi>&#x3C0;</mi>
-    <mn>4</mn>
-  </mfrac>
-</math> , and the phase of |1⟩ is <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>a</mi>
-  <mi>t</mi>
-  <mi>a</mi>
-  <mi>n</mi>
-  <mn>2</mn>
-  <mo stretchy="false">(</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mo>,</mo>
-  <mo>&#x2212;</mo>
-  <mfrac>
-    <mn>1</mn>
-    <mn>2</mn>
-  </mfrac>
-  <mo stretchy="false">)</mo>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mfrac>
-    <mi>&#x3C0;</mi>
-    <mn>4</mn>
-  </mfrac>
-</math>. The difference between these two phases is known as **relative phase**.
+The probability amplitudes 𝛼 and 𝛽 are complex numbers, therefore 𝛼 and 𝛽 have a phase. For example, consider a qubit in state $\frac{1 + i}{2}\ket{0} + \frac{1 - i}{2}\ket{1}$ If you do the math, you see that the phase of |0⟩ is $atan2(\frac12, \frac12) = \frac{\pi}{4}$. The difference between these two phases is known as **relative phase**.
 
-Multiplying the state of the entire system by <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mi>e</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mi>&#x3B8;</mi>
-    </mrow>
-  </msup>
-</math> doesn't affect the relative phase: 𝛼|0⟩+𝛽|1⟩ has the same relative phase as <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mi>e</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mi>&#x3B8;</mi>
-    </mrow>
-  </msup>
-</math>(𝛼|0⟩+𝛽|1⟩). In the second expression, 𝜃 is known as the system's **global phase**.
+Multiplying the state of the entire system by $e^{i\theta}$ doesn't affect the relative phase: 𝛼|0⟩+𝛽|1⟩ has the same relative phase as $e^{i\theta}\big(\alpha\ket{0} + \beta\ket{1}\big)$. In the second expression, 𝜃 is known as the system's **global phase**.
 
-The state of a qubit (or, more generally, the state of a quantum system) is defined by its relative phase - global phase arises as a consequence of using linear algebra to represent qubits, and has no physical meaning. That is, applying a phase to the entire state of a system (multiplying the entire vector by <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mi>e</mi>
-    <mrow data-mjx-texclass="ORD">
-      <mi>i</mi>
-      <mi>&#x3B8;</mi>
-    </mrow>
-  </msup>
-</math> for any real 𝜃) doesn't actually affect the state of the system. Because of this, global phase is sometimes known as **unobservable phase** or **hidden phase**.
+The state of a qubit (or, more generally, the state of a quantum system) is defined by its relative phase - global phase arises as a consequence of using linear algebra to represent qubits, and has no physical meaning. That is, applying a phase to the entire state of a system (multiplying the entire vector by $e^{i\theta}$ for any real 𝜃) doesn't actually affect the state of the system. Because of this, global phase is sometimes known as **unobservable phase** or **hidden phase**.
 
 ## Q# 
 ---
@@ -789,42 +120,8 @@ Before we continue, let's learn some techniques to visualize the quantum state o
 
 Let's start with a simple scenario: a program that acts on a single qubit. The state of the quantum system used by this program can be represented as a complex vector of length 2, or, using Dirac notation,
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mrow data-mjx-texclass="INNER">
-    <mo data-mjx-texclass="OPEN">[</mo>
-    <mtable columnspacing="1em" rowspacing="4pt">
-      <mtr>
-        <mtd>
-          <mi>&#x3B1;</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>&#x3B2;</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-    <mo data-mjx-texclass="CLOSE">]</mo>
-  </mrow>
-  <mo>=</mo>
-  <mi>&#x3B1;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>0</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-  <mo>+</mo>
-  <mi>&#x3B2;</mi>
-  <mrow data-mjx-texclass="ORD">
-    <mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo>
-    <mrow data-mjx-texclass="ORD">
-      <mn>1</mn>
-    </mrow>
-    <mo fence="false" stretchy="false">&#x27E9;</mo>
-  </mrow>
-</math>
+$$\begin{bmatrix} \alpha \\ \beta \end{bmatrix} = \alpha\ket{0} + \beta\ket{1}$$
+
 If this program runs on a physical quantum system, there is no way to get the information about the values of 𝛼 and 𝛽 at a certain point of the program execution from a single observation. You would need to run the program repeatedly up to this point, perform a measurement on the system, and aggregate the results of multiple measurements to estimate 𝛼 and 𝛽.
 
 However, at the early stages of quantum program development the program typically runs on a simulator - a classical program which simulates the behavior of a small quantum system while having complete information about its internal state. You can take advantage of this to do some non-physical things, such as peeking at the internals of the quantum system to observe its exact state without disturbing it!

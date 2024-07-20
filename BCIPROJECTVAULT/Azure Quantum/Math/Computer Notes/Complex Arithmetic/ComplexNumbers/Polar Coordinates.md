@@ -4,13 +4,13 @@
 > Another good source that details much found on here can be found on [this page](https://en.wikipedia.org/wiki/Complex_number)
 
 
-Consider the expression 𝑒𝑖𝜃=cos⁡𝜃+𝑖sin⁡𝜃. Notice that if we map this number onto the complex plane, it will land on a **unit circle** around 0+0𝑖. This means that its modulus is always 1. You can also verify this algebraically: cos2⁡𝜃+sin2⁡𝜃=1.
+Consider the expression $e^{i\theta} = \cos\theta + i\sin\theta$. Notice that if we map this number onto the complex plane, it will land on a **unit circle** around 0+0𝑖. This means that its modulus is always 1. You can also verify this algebraically: $\cos^2\theta + \sin^2\theta = 1$.
 
 Using this fact we can represent complex numbers using **polar coordinates**. In a polar coordinate system, a point is represented by two numbers: its direction from origin, represented by an angle from the 𝑥 axis, and how far away it is in that direction.
 
-Another way to think about this is that we're taking a point that is 1 unit away (which is on the unit circle) in the specified direction, and multiplying it by the desired distance. And to get the point on the unit circle, we can use 𝑒𝑖𝜃.
+Another way to think about this is that we're taking a point that is 1 unit away (which is on the unit circle) in the specified direction, and multiplying it by the desired distance. And to get the point on the unit circle, we can use $e^{i\theta}$.
 
-A complex number of the format 𝑟⋅𝑒𝑖𝜃 will be represented by a point which is 𝑟 units away from the origin, in the direction specified by the angle 𝜃. Sometimes 𝜃 will be referred to as the number's **argument** or **phase**.
+A complex number of the format $r \cdot e^{i\theta}$ will be represented by a point which is 𝑟 units away from the origin, in the direction specified by the angle 𝜃. Sometimes 𝜃 will be referred to as the number's **argument** or **phase**.
 
 >In Q#, complex numbers in polar form are represented as user-defined type `ComplexPolar` from the `Microsoft.Quantum.Math` namespace.
 >
