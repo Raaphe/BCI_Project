@@ -11,10 +11,9 @@ This will be the course I will follow to learn how to process brain wave dataset
 
 # 2. Machine Learning
 
-1. [ ] [PyTorch Docs](https://pytorch.org/tutorials/beginner/basics/intro.html)
-2. [ ] [Youtube Theory Playlist](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-3. [ ] [Training for ML](https://www.kaggle.com/)
+1. [ ] [25h Youtube Course Video](https://www.youtube.com/watch?v=V_xro1bcAuA&t=43s&ab_channel=freeCodeCamp.org)
 
+This video looks fairly complete and will run me through what I think I need to master `pytorch`. Looks pretty consumable and could be done watching in a week or two. 
 # 3. QML (Quantum Machine Learning)
 
  1. [ ]  [Penny Lane](https://docs.pennylane.ai/en/stable/introduction/interfaces/torch.html)

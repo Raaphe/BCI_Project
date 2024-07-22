@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
+                "file": "BCIPROJECTVAULT/Learning Path - START.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
+                "file": "BCIPROJECTVAULT/Learning Path - START.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
+                "file": "BCIPROJECTVAULT/Learning Path - START.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md"
+                "file": "BCIPROJECTVAULT/Learning Path - START.md"
               }
             }
           },
@@ -157,6 +157,9 @@
   },
   "active": "4663d995ae48c407",
   "lastOpenFiles": [
+    "README.md",
+    "BCIPROJECTVAULT/Learning Path - START.md",
+    "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Ket-Bra.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/The Qubit.md",
@@ -167,14 +170,12 @@
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Linear Algebra/21 24 28 32.pdf",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625200955.png",
-    "README.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625200401.png",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit/Untitled.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit",
     "BCIPROJECTVAULT/Azure Quantum/Math/Written Notes/Linear Algebra",
     "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/image/Pasted image 20240625163207.png",
-    "BCIPROJECTVAULT/Learning Path - START.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Tensors.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming",
