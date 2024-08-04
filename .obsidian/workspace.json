@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning Path - START.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning Path - START.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning Path - START.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning Path - START.md"
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md"
               }
             }
           },
@@ -157,36 +157,37 @@
   },
   "active": "43c70d57892ebee5",
   "lastOpenFiles": [
+    "models/model_02_PyTorch_workflow.pth",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Exercises/Workflow_exercise.py",
+    "models/model_01_PyTorch_workflow.pth",
+    "models",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804033144.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804045800.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804074447.png",
+    "Pasted image 20240804074447.png",
+    "Pasted image 20240804045800.png",
+    "Pasted image 20240804033144.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804032155.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804013237.png",
+    "Pasted image 20240804013237.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804011707.png",
+    "BCIPROJECTVAULT/Learning Path - START.md",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/PyTorch_Workflow.py",
     "model.pth",
     "data/FashionMNIST/raw/t10k-labels-idx1-ubyte",
     "data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz",
     "data/FashionMNIST/raw/t10k-images-idx3-ubyte",
     "data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz",
     "data/FashionMNIST/raw/train-labels-idx1-ubyte",
-    "data/FashionMNIST/raw/train-labels-idx1-ubyte.gz",
-    "data/FashionMNIST/raw/train-images-idx3-ubyte",
-    "data/FashionMNIST/raw/train-images-idx3-ubyte.gz",
-    "data/FashionMNIST/raw",
-    "data/FashionMNIST",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Accessing a GPU.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Tensors and NumPy.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Introduction to Tensors.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Matrix Multiplication.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240724104450.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240723174301.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Pytorch.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722203437.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722203328.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722201646.png",
     "torchvision.models.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/What is Deep Learning.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722200342.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722200214.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722200111.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722195928.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240722195351.png",
-    "BCIPROJECTVAULT/Learning Path - START.md",
     "README.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
@@ -201,7 +202,6 @@
     "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Tensors.md",
     "2024-06-22.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Complex Numbers.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Polar Coordinates.md"
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Complex Numbers.md"
   ]
 }
