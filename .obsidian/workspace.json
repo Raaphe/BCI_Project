@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,25 +85,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "2510f2643ce0ea43",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
-                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -125,7 +113,19 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md"
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md"
+              }
+            }
+          },
+          {
+            "id": "2510f2643ce0ea43",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -142,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,29 +158,32 @@
   },
   "active": "43c70d57892ebee5",
   "lastOpenFiles": [
-    "models/model_02_PyTorch_workflow.pth",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Exercises/Workflow_exercise.py",
-    "models/model_01_PyTorch_workflow.pth",
-    "models",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__/helper_functions.cpython-310.pyc",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/helper_functions.py",
+    "helper_functions.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MCCProblem.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MCCProblem",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__/helper_functions.cpython-310.pyc",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/Replicating_Functions.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/PyTorchClassification.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240810165805.png",
+    "Pasted image 20240810165805.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/sklearn-env/Lib/site-packages/idna-3.7.dist-info/LICENSE.md",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804102100.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804101329.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804100811.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
+    "sklearn-env/Lib/site-packages/idna-3.7.dist-info/LICENSE.md",
+    "Pasted image 20240804102100.png",
+    "Pasted image 20240804101329.png",
+    "Pasted image 20240804100811.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804033144.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804045800.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804074447.png",
-    "Pasted image 20240804074447.png",
-    "Pasted image 20240804045800.png",
-    "Pasted image 20240804033144.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804032155.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804013237.png",
-    "Pasted image 20240804013237.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804011707.png",
     "BCIPROJECTVAULT/Learning Path - START.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/PyTorch_Workflow.py",
-    "model.pth",
-    "data/FashionMNIST/raw/t10k-labels-idx1-ubyte",
-    "data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz",
-    "data/FashionMNIST/raw/t10k-images-idx3-ubyte",
-    "data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz",
-    "data/FashionMNIST/raw/train-labels-idx1-ubyte",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Accessing a GPU.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Tensors and NumPy.md",
@@ -199,9 +203,6 @@
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit/Untitled.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/README.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Tensors.md",
-    "2024-06-22.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/Complex Numbers.md"
+    "BCIPROJECTVAULT/Azure Quantum/Math/README.md"
   ]
 }

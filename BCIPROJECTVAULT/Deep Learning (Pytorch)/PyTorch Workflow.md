@@ -224,6 +224,18 @@ And specifically in PyTorch, we need:
 > 
 > But for a classification problem like classifying whether a photo is of a dog or a cat, you'll likely want to use a loss function of `nn.BCELoss()` (binary cross entropy loss).
 
+### Choosing a Optimizer/Loss Function
+---
+
+
+| Loss function/Optimizer                     | Problem type                             | PyTorch Code                                                                                                                                                                                       |
+| ------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Stochastic Gradient Descent (SGD) optimizer | Classification, regression, many others. | [`torch.optim.SGD()`](https://pytorch.org/docs/stable/generated/torch.optim.SGD.html)                                                                                                              |
+| Adam Optimizer                              | Classification, regression, many others. | [`torch.optim.Adam()`](https://pytorch.org/docs/stable/generated/torch.optim.Adam.html)                                                                                                            |
+| Binary cross entropy loss                   | Binary classification                    | [`torch.nn.BCELossWithLogits`](https://pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html) or [`torch.nn.BCELoss`](https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html) |
+| Cross entropy loss                          | Mutli-class classification               | [`torch.nn.CrossEntropyLoss`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)                                                                                            |
+| Mean absolute error (MAE) or L1 Loss        | Regression                               | [`torch.nn.L1Loss`](https://pytorch.org/docs/stable/generated/torch.nn.L1Loss.html)                                                                                                                |
+| Mean squared error (MSE) or L2 Loss         | Regression                               | [`torch.nn.MSELoss`](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html#torch.nn.MSELoss)                                                                                             |
 
 ### Building a testing/training loop
 ---
