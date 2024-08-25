@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning.md",
+                "file": "Deep Learning (Pytorch)/Machine Vision.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c805a307ee5e0b60",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning.md",
+                "file": "Deep Learning (Pytorch)/Machine Vision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning.md",
+                "file": "Deep Learning (Pytorch)/Machine Vision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Learning.md"
+                "file": "Deep Learning (Pytorch)/Machine Vision.md"
               }
             }
           }
@@ -148,6 +149,7 @@
   },
   "active": "36cefe43571cf61c",
   "lastOpenFiles": [
+    "Deep Learning (Pytorch)/Machine Vision.md",
     "BCIPROJECTVAULT/Learning.md"
   ]
 }
