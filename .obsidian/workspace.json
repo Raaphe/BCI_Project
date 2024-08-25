@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md"
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md"
               }
             }
           },
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,6 +158,13 @@
   },
   "active": "43c70d57892ebee5",
   "lastOpenFiles": [
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MoonExercise.py",
+    "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Ket-Bra.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
+    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__/helper_functions.cpython-310.pyc",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/helper_functions.py",
@@ -168,7 +175,6 @@
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__/helper_functions.cpython-310.pyc",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/Replicating_Functions.py",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/PyTorchClassification.py",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240810165805.png",
     "Pasted image 20240810165805.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/sklearn-env/Lib/site-packages/idna-3.7.dist-info/LICENSE.md",
@@ -176,7 +182,6 @@
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804101329.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804100811.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/PyTorch Workflow.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
     "sklearn-env/Lib/site-packages/idna-3.7.dist-info/LICENSE.md",
     "Pasted image 20240804102100.png",
     "Pasted image 20240804101329.png",
@@ -194,13 +199,8 @@
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/What is Deep Learning.md",
     "README.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Multi-Qubit Systems.md",
-    "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Ket-Bra.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/The Qubit.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Linear Algebra/Matrices.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
-    "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/Qubit/Untitled.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/README.md"
