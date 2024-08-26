@@ -33,3 +33,4 @@ Architecture of a CNN:
 | Output Layer/Linear Layer               | Takes learned features and outputs them in shape of target labels/target. | `torch.nn.Linear(out_features=[number_of_classes])` (e.g. 3 for pizza, steak and sushi)                                                                                                                                    |
 | Output Activation                       | Converts output logits to prediction probabilities                        | `torch.sigmoid()` (binary classification) or `torch.softmax()` (multi-class classification)                                                                                                                                |
 
+![[Pasted image 20240825165845.png]]

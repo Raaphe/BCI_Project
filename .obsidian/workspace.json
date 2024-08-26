@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Vision.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Vision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md"
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Vision.md"
               }
             }
           },
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
+                "file": "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Vision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,23 +158,25 @@
   },
   "active": "43c70d57892ebee5",
   "lastOpenFiles": [
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MoonExercise.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_cnn_v1.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_cnn copy.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_cnn.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_non_linear copy.py",
+    "Pasted image 20240825165845.png",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_non_linear.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_linear copy.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/fashion_mnist_linear.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/__pycache__/helper_functions.cpython-310.pyc",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/__pycache__",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/helper_functions.py",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/ComputerVision/data/FashionMNIST/raw/t10k-labels-idx1-ubyte",
+    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
     "BCIPROJECTVAULT/Azure Quantum/Quantum Programming/The Qubit/Qubit Gates.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Ket-Bra.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Complex Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Imaginary Numbers.md",
     "BCIPROJECTVAULT/Azure Quantum/Math/Computer Notes/Complex Arithmetic/ComplexNumbers/Polar Coordinates.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Machine Learning Classification.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__/helper_functions.cpython-310.pyc",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/__pycache__",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/helper_functions.py",
-    "helper_functions.py",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MCCProblem.py",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification/MCCProblem",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/Multi-classClassification",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__/helper_functions.cpython-310.pyc",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/__pycache__",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/Classification/BinaryClassification/Replicating_Functions.py",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240810165805.png",
     "Pasted image 20240810165805.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Code/sklearn-env/Lib/site-packages/idna-3.7.dist-info/LICENSE.md",
@@ -187,10 +189,8 @@
     "Pasted image 20240804101329.png",
     "Pasted image 20240804100811.png",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804033144.png",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/images/Pasted image 20240804045800.png",
     "BCIPROJECTVAULT/Learning Path - START.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Accessing a GPU.md",
-    "BCIPROJECTVAULT/Deep Learning (Pytorch)/Reproducibility.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Tensors and NumPy.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Introduction to Tensors.md",
     "BCIPROJECTVAULT/Deep Learning (Pytorch)/Matrix Multiplication.md",
